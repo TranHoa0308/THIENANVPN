@@ -182,10 +182,9 @@
         }
         
         #khung_vien {
-            margin-left: 5px;
-            margin-top: 15px;
-            width: 350px;
-            height: 990px;
+            margin: auto;
+            width: 50%;
+            padding: 10px;
         }
         
         #khung_vien_2 {
