@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Blog | Gói Dịch Vụ</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <!--//-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <style>
+        .table_size {
+            margin: auto;
+            width: 20%;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="dashboard.html" class="nav-link">Gói Dịch Vụ</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="knowledge.html" class="nav-link">Hướng Dẫn Sử Dụng</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="contact.html" class="nav-link">Liên Hệ</a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                          <i class="fas fa-search"></i>
+                        </button>
+                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                          <i class="fas fa-times"></i>
+                        </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+
+                <!-- Messages Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-comments"></i>
+                        <span class="badge badge-danger navbar-badge"></span>
+                    </a>
+                </li>
+                <!-- Notifications Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-warning navbar-badge"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4 ">
+            <!-- Brand Logo -->
+            <a href="dashboard.html" class="brand-link">
+                <img src="/image_theme_login/logo.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">THIÊN ÂN VPN</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="/image_theme_login/logo1.jpg" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="https://thienan.pw/#/login" class="d-block">Xin Chào Quý Khách!</a>
+                    </div>
+                </div>
+
+                <!-- SidebarSearch Form -->
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+                      <i class="fas fa-search fa-fw"></i>
+                    </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                       with font-awesome or any other icon font library -->
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Menu
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="dashboard.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Gói Dịch Vụ</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="knowledge.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Hướng Dẫn Sử Dụng</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="contact.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Liên Hệ</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://thienan.pw/#/register" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Đăng Ký
+                                    <span class="right badge badge-danger">New</span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Gói Dịch Vụ</h1>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Gói Dịch Vụ</li>
+                            </ol>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div align="center">
+                <h2 style="color:rgb(20, 101, 128)"><b></b></h2>
+            </div>
+            <div id="khung_vien_2" class="wrapper border border-2 rounded border-primary">
+                <br>
+                <center>
+                    <h3><b> Thiên Ân Free </b></h3>
+                    <h3 style="color:rgb(20, 101, 128)"> Miễn Phí </h3>
+                    <div class="py-2"><b style="color:DeepSkyBlue">Thời Gian Sử Dụng 1 Tháng </b>
+                        <div align="center">
+                            <i class="fas fa-database" style="color:darkblue" align="left"></i> Dung lượng : <b style="color:OrangeRed"> 【20 GB】</b>
+                            <p class="”indent”"></p>
+                            <i class="fas fa-server" style="color:darkblue"></i> Server: <b>
+                         <br><img src=" https://1.bp.blogspot.com/-wlhEg8IwnLw/YEKR5-ReWwI/AAAAAAAA42Q/CpthX4cZyp4zNtaf9w54lu-sZYIOCswoQCLcBGAsYHQ/s0/Flag_of_Singapore.gif" style="width:35px;height:20px;">  
+                        【Singapore】
+                        </b>
+                            <p class="”indent”"></p>
+                            <i class="fas fa-tachometer-alt" style="color:darkblue"></i> Tối đa <b><b style="color:OrangeRed">200 Mbps</b></b> (Tùy theo từng khu vực)
+                            <p class="”indent”"></p>
+                            <i class="fas fa-tools" style="color:darkblue"></i> Tăng tốc - Giảm ping - Chống LAG - Fake IP
+                            <p class="”indent”"></p>
+                            <i class="fa fa-mobile" style="color:darkblue"></i> Hỗ Trợ Hệ Điều Hành: <br> <i class="fab fa-android" style="color:LimeGreen"></i> <b>Android</b> (v2flyNG, v2rayNG, Clash For Android)<br>
+                            <i class="fab fa-apple" style="color: Gold"></i><b> iPhone</b> (Shadowrocket)
+                            <br><i class="fas fa-desktop" style="color: orange"></i><b> PC</b> (Netch)
+                            <p class="”indent”"></p> <i class="fas fa-sim-card" style="color:red"></i> Hỗ Trợ Sim: <b style="color:red">Viettel</b> &amp; <b style="color:Purple">MobiFone</b> &amp; <b style="color:orange">Vietnamobile</b>
+                            <p class="”indent”"></p>
+                            <i class="far fa-user" style="color:darkblue"></i> Người Dùng : <b><b style="color:OrangeRed"> 0/2 </b></b> Người
+                            <p class="”indent”"></p>
+                            <center>
+                                <b><b style="color:red">Thanh Toán</b> Vui Lòng Inbox Trực Tiếp</b>
+                                </br>
+                                <a href="https://zalo.me/0397082866" style="color:DodgerBlue">
+                                    <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;"></a>
+                                </br> <b>Hoặc Zalo Nhóm</b></br>
+                                <a href="https://zalo.me/g/xzzdst581" style="color:DodgerBlue">
+                                    <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;">
+                                </a>
+                            </center>
+                            <p class="”indent”"></p>
+                            <b><center>Nạp tiền qua Admin ➪ Mua ngay<br> ➪ Đặt hàng ➪ Thanh toán
+                        </center>
+                        </b>
+                            <p class="”indent”"></p>
+                            <center>
+                                <img src="https://img.icons8.com/color/48/000000/android-os.png">
+                                <img src="https://img.icons8.com/color/48/000000/mac-os.png">
+                                <img src="https://img.icons8.com/color/48/000000/windows-10.png">
+                                <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/48/000000/external-router-media-technology-flatart-icons-outline-flatarticons.png">
+                            </center>
+                        </div>
+                </center>
+                </div>
+                <div id="khung_vien" class="wrapper border border-2 rounded border-primary">
+                    <br>
+                    <center>
+                        <h3><b> Thiên Ân Gift (Tặng Sự Kiện Member)</b></h3>
+                        <h3 style="color:rgb(20, 101, 128)"> Miễn Phí </h3>
+                        <div><b style="color:red">Lưu Ý: Gói tặng Event, Vui lòng không mua </b></div>
+                        <div class="py-2"><b style="color:DeepSkyBlue">Thời Gian Sử Dụng 1 Tháng </b></div>
+                    </center>
+                    <div align="center">
+                        <i class="fas fa-database" style="color:darkblue" align="left"></i> Dung lượng : <b style="color:OrangeRed"> 【100 GB】</b>
+                        <p class="”indent”"></p>
+                        <i class="fas fa-server" style="color:darkblue"></i> Server: <b><br><img src="https://icarepharma.com.vn/wp-content/uploads/2020/09/Flag_of_Vietnam.gif" style="width:35px;height:20px;">
+                    【HCM, HN】
+                     <br><img src=" https://1.bp.blogspot.com/-wlhEg8IwnLw/YEKR5-ReWwI/AAAAAAAA42Q/CpthX4cZyp4zNtaf9w54lu-sZYIOCswoQCLcBGAsYHQ/s0/Flag_of_Singapore.gif" style="width:35px;height:20px;">  
+                    【Singapore】
+                    <br><img src=" https://1.bp.blogspot.com/-n-ib8nHUOdI/YFYcs-v1ApI/AAAAAAAA53g/_O-LQSfJ2AAnivIKJjfLdhBcIjNS05UggCLcBGAsYHQ/s0/Flag_of_Hong_Kong.gif" style="width:35px;height:20px;">  
+                    【Hong Kong】</b>
+                        <p class="”indent”"></p>
+                        <i class="fas fa-tachometer-alt" style="color:darkblue"></i> Tối đa <b><b style="color:OrangeRed">200 Mbps</b></b> (Tùy theo từng khu vực)
+                        <p class="”indent”"></p>
+                        <i class="fas fa-tools" style="color:darkblue"></i> Tăng tốc - Giảm ping - Chống LAG - Fake IP
+                        <p class="”indent”"></p>
+                        <i class="fa fa-mobile" style="color:darkblue"></i> Hỗ Trợ Hệ Điều Hành: <br> <i class="fab fa-android" style="color:LimeGreen"></i> <b>Android</b> (v2flyNG, v2rayNG, Clash For Android)<br>
+                        <i class="fab fa-apple" style="color: Gold"></i><b> iPhone</b> (Shadowrocket)
+                        <br><i class="fas fa-desktop" style="color: orange"></i><b> PC</b> (Netch)
+                        <p class="”indent”"></p> <i class="fas fa-sim-card" style="color:red"></i> Hỗ Trợ Sim: <b style="color:red">Viettel</b> &amp; <b style="color:Purple">MobiFone</b> &amp; <b style="color:orange">Vietnamobile</b>
+                        <p class="”indent”"></p>
+                        <i class="far fa-user" style="color:darkblue"></i> Người Dùng : <b><b style="color:OrangeRed"> 0/2 </b></b> Người
+                        <p class="”indent”"></p>
+                        <center>
+                            <b><b style="color:red">Thanh Toán</b> Vui Lòng Inbox Trực Tiếp</b>
+                            </br>
+                            <a href="https://zalo.me/0397082866" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;"></a>
+                            </br> <b>Hoặc Zalo Nhóm</b></br>
+                            <a href="https://zalo.me/g/xzzdst581" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;">
+                            </a>
+                        </center>
+                        <p class="”indent”"></p>
+                        <b><center>Nạp tiền qua Admin ➪ Mua ngay<br> ➪ Đặt hàng ➪ Thanh toán
+                    </center>
+                    </b>
+                        <p class="”indent”"></p>
+                        <center>
+                            <img src="https://img.icons8.com/color/48/000000/android-os.png">
+                            <img src="https://img.icons8.com/color/48/000000/mac-os.png">
+                            <img src="https://img.icons8.com/color/48/000000/windows-10.png">
+                            <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/48/000000/external-router-media-technology-flatart-icons-outline-flatarticons.png">
+                        </center>
+                    </div>
+                </div>
+                <div id="khung_vien_3" class="wrapper border border-2 rounded border-primary">
+                    <br>
+                    <center>
+                        <h3><b> Thiên Ân Trial </b></h3>
+                        <h3 style="color:rgb(20, 101, 128)"> 5.000 VNĐ </h3>
+                        <div class="py-2"><b style="color:red">Lưu Ý: Dùng Phiếu Giảm Giá Để Mua (30 Suất/Tháng) </b></div>
+                        <div class="py-2"><b style="color:DeepSkyBlue">Thời Gian Sử Dụng 1 Tháng </b></div>
+                    </center>
+                    <div align="center">
+                        <i class="fas fa-database" style="color:darkblue" align="left"></i> Dung lượng : <b style="color:OrangeRed"> 【7 GB】</b>
+                        <p class="”indent”"></p>
+                        <i class="fas fa-server" style="color:darkblue"></i> Server: <b><br><img src="https://icarepharma.com.vn/wp-content/uploads/2020/09/Flag_of_Vietnam.gif" style="width:35px;height:20px;">
+                        【HCM, HN】
+                         <br><img src=" https://1.bp.blogspot.com/-wlhEg8IwnLw/YEKR5-ReWwI/AAAAAAAA42Q/CpthX4cZyp4zNtaf9w54lu-sZYIOCswoQCLcBGAsYHQ/s0/Flag_of_Singapore.gif" style="width:35px;height:20px;">  
+                        【Singapore】
+                        <br><img src=" https://1.bp.blogspot.com/-n-ib8nHUOdI/YFYcs-v1ApI/AAAAAAAA53g/_O-LQSfJ2AAnivIKJjfLdhBcIjNS05UggCLcBGAsYHQ/s0/Flag_of_Hong_Kong.gif" style="width:35px;height:20px;">  
+                        【Hong Kong】</b>
+                        <p class="”indent”"></p>
+                        <i class="fas fa-tachometer-alt" style="color:darkblue"></i> Tối đa <b><b style="color:OrangeRed">200 Mbps</b></b> (Tùy theo từng khu vực)
+                        <p class="”indent”"></p>
+                        <i class="fas fa-tools" style="color:darkblue"></i> Tăng tốc - Giảm ping - Chống LAG - Fake IP
+                        <p class="”indent”"></p>
+                        <i class="fa fa-mobile" style="color:darkblue"></i> Hỗ Trợ Hệ Điều Hành: <br> <i class="fab fa-android" style="color:LimeGreen"></i> <b>Android</b> (v2flyNG, v2rayNG, Clash For Android)<br>
+                        <i class="fab fa-apple" style="color: Gold"></i><b> iPhone</b> (Shadowrocket)
+                        <br><i class="fas fa-desktop" style="color: orange"></i><b> PC</b> (Netch)
+                        <p class="”indent”"></p> <i class="fas fa-sim-card" style="color:red"></i> Hỗ Trợ Sim: <b style="color:red">Viettel</b> &amp; <b style="color:Purple">MobiFone</b> &amp; <b style="color:orange">Vietnamobile</b>
+                        <p class="”indent”"></p>
+                        <i class="far fa-user" style="color:darkblue"></i> Người Dùng : <b><b style="color:OrangeRed"> 0/2 </b></b> Người
+                        <p class="”indent”"></p>
+                        <center>
+                            <b><b style="color:red">Thanh Toán</b> Vui Lòng Inbox Trực Tiếp</b>
+                            </br>
+                            <a href="https://zalo.me/0397082866" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;"></a>
+                            </br> <b>Hoặc Zalo Nhóm</b></br>
+                            <a href="https://zalo.me/g/xzzdst581" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;">
+                            </a>
+                        </center>
+                        <p class="”indent”"></p>
+                        <b><center>Nạp tiền qua Admin ➪ Mua ngay<br> ➪ Đặt hàng ➪ Thanh toán
+                        </center>
+                        </b>
+                        <p class="”indent”"></p>
+                        <center>
+                            <img src="https://img.icons8.com/color/48/000000/android-os.png">
+                            <img src="https://img.icons8.com/color/48/000000/mac-os.png">
+                            <img src="https://img.icons8.com/color/48/000000/windows-10.png">
+                            <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/48/000000/external-router-media-technology-flatart-icons-outline-flatarticons.png">
+                        </center>
+                    </div>
+                </div>
+                <div id="khung_vien_4" class="wrapper border border-2 rounded border-primary">
+                    <br>
+                    <center>
+                        <h3><b> Thiên Ân Basic </b></h3>
+                        <h3 style="color:rgb(20, 101, 128)"> 10.000 VNĐ </h3>
+                        <div class="py-2"><b style="color:DeepSkyBlue">Thời Gian Sử Dụng 1 Tháng </b></div>
+                    </center>
+                    <div align="center">
+                        <i class="fas fa-database" style="color:darkblue" align="left"></i> Dung lượng : <b style="color:OrangeRed"> 【30 GB】</b>
+                        <p class="”indent”"></p>
+                        <i class="fas fa-server" style="color:darkblue"></i> Server: <b><br><img src="https://icarepharma.com.vn/wp-content/uploads/2020/09/Flag_of_Vietnam.gif" style="width:35px;height:20px;">
+                        【HCM, HN】
+                         <br><img src=" https://1.bp.blogspot.com/-wlhEg8IwnLw/YEKR5-ReWwI/AAAAAAAA42Q/CpthX4cZyp4zNtaf9w54lu-sZYIOCswoQCLcBGAsYHQ/s0/Flag_of_Singapore.gif" style="width:35px;height:20px;">  
+                        【Singapore】
+                        <br><img src=" https://1.bp.blogspot.com/-n-ib8nHUOdI/YFYcs-v1ApI/AAAAAAAA53g/_O-LQSfJ2AAnivIKJjfLdhBcIjNS05UggCLcBGAsYHQ/s0/Flag_of_Hong_Kong.gif" style="width:35px;height:20px;">  
+                        【Hong Kong】</b>
+                        <p class="”indent”"></p>
+                        <i class="fas fa-tachometer-alt" style="color:darkblue"></i> Tối đa <b><b style="color:OrangeRed">200 Mbps</b></b> (Tùy theo từng khu vực)
+                        <p class="”indent”"></p>
+                        <i class="fas fa-tools" style="color:darkblue"></i> Tăng tốc - Giảm ping - Chống LAG - Fake IP
+                        <p class="”indent”"></p>
+                        <i class="fa fa-mobile" style="color:darkblue"></i> Hỗ Trợ Hệ Điều Hành: <br> <i class="fab fa-android" style="color:LimeGreen"></i> <b>Android</b> (v2flyNG, v2rayNG, Clash For Android)<br>
+                        <i class="fab fa-apple" style="color: Gold"></i><b> iPhone</b> (Shadowrocket)
+                        <br><i class="fas fa-desktop" style="color: orange"></i><b> PC</b> (Netch)
+                        <p class="”indent”"></p> <i class="fas fa-sim-card" style="color:red"></i> Hỗ Trợ Sim: <b style="color:red">Viettel</b> &amp; <b style="color:Purple">MobiFone</b> &amp; <b style="color:orange">Vietnamobile</b>
+                        <p class="”indent”"></p>
+                        <i class="far fa-user" style="color:darkblue"></i> Người Dùng : <b><b style="color:OrangeRed"> 0/2 </b></b> Người
+                        <p class="”indent”"></p>
+                        <center>
+                            <b><b style="color:red">Thanh Toán</b> Vui Lòng Inbox Trực Tiếp</b>
+                            </br>
+                            <a href="https://zalo.me/0397082866" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;"></a>
+                            </br> <b>Hoặc Zalo Nhóm</b></br>
+                            <a href="https://zalo.me/g/xzzdst581" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;">
+                            </a>
+                        </center>
+                        <p class="”indent”"></p>
+                        <b><center>Nạp tiền qua Admin ➪ Mua ngay<br> ➪ Đặt hàng ➪ Thanh toán
+                        </center>
+                        </b>
+                        <p class="”indent”"></p>
+                        <center>
+                            <img src="https://img.icons8.com/color/48/000000/android-os.png">
+                            <img src="https://img.icons8.com/color/48/000000/mac-os.png">
+                            <img src="https://img.icons8.com/color/48/000000/windows-10.png">
+                            <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/48/000000/external-router-media-technology-flatart-icons-outline-flatarticons.png">
+                        </center>
+                    </div>
+                </div>
+                <div id="khung_vien_4" class="wrapper border border-2 rounded border-primary">
+                    <br>
+                    <center>
+                        <h3><b> Thiên Ân Plus </b></h3>
+                        <h3 style="color:rgb(20, 101, 128)"> 20.000 VNĐ </h3>
+                        <div class="py-2"><b style="color:DeepSkyBlue">Thời Gian Sử Dụng 1 Tháng </b></div>
+                    </center>
+                    <div align="center">
+                        <i class="fas fa-database" style="color:darkblue" align="left"></i> Dung lượng : <b style="color:OrangeRed"> 【90 GB】</b>
+                        <p class="”indent”"></p>
+                        <i class="fas fa-server" style="color:darkblue"></i> Server: <b><br><img src="https://icarepharma.com.vn/wp-content/uploads/2020/09/Flag_of_Vietnam.gif" style="width:35px;height:20px;">
+                        【HCM, HN】
+                         <br><img src=" https://1.bp.blogspot.com/-wlhEg8IwnLw/YEKR5-ReWwI/AAAAAAAA42Q/CpthX4cZyp4zNtaf9w54lu-sZYIOCswoQCLcBGAsYHQ/s0/Flag_of_Singapore.gif" style="width:35px;height:20px;">  
+                        【Singapore】
+                        <br><img src=" https://1.bp.blogspot.com/-n-ib8nHUOdI/YFYcs-v1ApI/AAAAAAAA53g/_O-LQSfJ2AAnivIKJjfLdhBcIjNS05UggCLcBGAsYHQ/s0/Flag_of_Hong_Kong.gif" style="width:35px;height:20px;">  
+                        【Hong Kong】</b>
+                        <p class="”indent”"></p>
+                        <i class="fas fa-tachometer-alt" style="color:darkblue"></i> Tối đa <b><b style="color:OrangeRed">200 Mbps</b></b> (Tùy theo từng khu vực)
+                        <p class="”indent”"></p>
+                        <i class="fas fa-tools" style="color:darkblue"></i> Tăng tốc - Giảm ping - Chống LAG - Fake IP
+                        <p class="”indent”"></p>
+                        <i class="fa fa-mobile" style="color:darkblue"></i> Hỗ Trợ Hệ Điều Hành: <br> <i class="fab fa-android" style="color:LimeGreen"></i> <b>Android</b> (v2flyNG, v2rayNG, Clash For Android)<br>
+                        <i class="fab fa-apple" style="color: Gold"></i><b> iPhone</b> (Shadowrocket)
+                        <br><i class="fas fa-desktop" style="color: orange"></i><b> PC</b> (Netch)
+                        <p class="”indent”"></p> <i class="fas fa-sim-card" style="color:red"></i> Hỗ Trợ Sim: <b style="color:red">Viettel</b> &amp; <b style="color:Purple">MobiFone</b> &amp; <b style="color:orange">Vietnamobile</b>
+                        <p class="”indent”"></p>
+                        <i class="far fa-user" style="color:darkblue"></i> Người Dùng : <b><b style="color:OrangeRed"> 0/2 </b></b> Người
+                        <p class="”indent”"></p>
+                        <center>
+                            <b><b style="color:red">Thanh Toán</b> Vui Lòng Inbox Trực Tiếp</b>
+                            </br>
+                            <a href="https://zalo.me/0397082866" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;"></a>
+                            </br> <b>Hoặc Zalo Nhóm</b></br>
+                            <a href="https://zalo.me/g/xzzdst581" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;">
+                            </a>
+                        </center>
+                        <p class="”indent”"></p>
+                        <b><center>Nạp tiền qua Admin ➪ Mua ngay<br> ➪ Đặt hàng ➪ Thanh toán
+                        </center>
+                        </b>
+                        <p class="”indent”"></p>
+                        <center>
+                            <img src="https://img.icons8.com/color/48/000000/android-os.png">
+                            <img src="https://img.icons8.com/color/48/000000/mac-os.png">
+                            <img src="https://img.icons8.com/color/48/000000/windows-10.png">
+                            <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/48/000000/external-router-media-technology-flatart-icons-outline-flatarticons.png">
+                        </center>
+                    </div>
+                </div>
+                <div id="khung_vien_4" class="wrapper border border-2 rounded border-primary">
+                    <br>
+                    <center>
+                        <h3><b> Thiên Ân Pro </b></h3>
+                        <h3 style="color:rgb(20, 101, 128)"> 25.000 VNĐ </h3>
+                        <div class="py-2"><b style="color:DeepSkyBlue">Thời Gian Sử Dụng 1 Tháng </b></div>
+                    </center>
+                    <div align="center">
+                        <i class="fas fa-database" style="color:darkblue" align="left"></i> Dung lượng : <b style="color:OrangeRed"> 【500 GB】</b>
+                        <p class="”indent”"></p>
+                        <i class="fas fa-server" style="color:darkblue"></i> Server: <b><br><img src="https://icarepharma.com.vn/wp-content/uploads/2020/09/Flag_of_Vietnam.gif" style="width:35px;height:20px;">
+                        【HCM, HN】
+                         <br><img src=" https://1.bp.blogspot.com/-wlhEg8IwnLw/YEKR5-ReWwI/AAAAAAAA42Q/CpthX4cZyp4zNtaf9w54lu-sZYIOCswoQCLcBGAsYHQ/s0/Flag_of_Singapore.gif" style="width:35px;height:20px;">  
+                        【Singapore】
+                        <br><img src=" https://1.bp.blogspot.com/-n-ib8nHUOdI/YFYcs-v1ApI/AAAAAAAA53g/_O-LQSfJ2AAnivIKJjfLdhBcIjNS05UggCLcBGAsYHQ/s0/Flag_of_Hong_Kong.gif" style="width:35px;height:20px;">  
+                        【Hong Kong】</b>
+                        <p class="”indent”"></p>
+                        <i class="fas fa-tachometer-alt" style="color:darkblue"></i> Tối đa <b><b style="color:OrangeRed">200 Mbps</b></b> (Tùy theo từng khu vực)
+                        <p class="”indent”"></p>
+                        <i class="fas fa-tools" style="color:darkblue"></i> Tăng tốc - Giảm ping - Chống LAG - Fake IP
+                        <p class="”indent”"></p>
+                        <i class="fa fa-mobile" style="color:darkblue"></i> Hỗ Trợ Hệ Điều Hành: <br> <i class="fab fa-android" style="color:LimeGreen"></i> <b>Android</b> (v2flyNG, v2rayNG, Clash For Android)<br>
+                        <i class="fab fa-apple" style="color: Gold"></i><b> iPhone</b> (Shadowrocket)
+                        <br><i class="fas fa-desktop" style="color: orange"></i><b> PC</b> (Netch)
+                        <p class="”indent”"></p> <i class="fas fa-sim-card" style="color:red"></i> Hỗ Trợ Sim: <b style="color:red">Viettel</b> &amp; <b style="color:Purple">MobiFone</b> &amp; <b style="color:orange">Vietnamobile</b>
+                        <p class="”indent”"></p>
+                        <i class="far fa-user" style="color:darkblue"></i> Người Dùng : <b><b style="color:OrangeRed"> 0/2 </b></b> Người
+                        <p class="”indent”"></p>
+                        <center>
+                            <b><b style="color:red">Thanh Toán</b> Vui Lòng Inbox Trực Tiếp</b>
+                            </br>
+                            <a href="https://zalo.me/0397082866" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;"></a>
+                            </br> <b>Hoặc Zalo Nhóm</b></br>
+                            <a href="https://zalo.me/g/xzzdst581" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;">
+                            </a>
+                        </center>
+                        <p class="”indent”"></p>
+                        <b><center>Nạp tiền qua Admin ➪ Mua ngay<br> ➪ Đặt hàng ➪ Thanh toán
+                        </center>
+                        </b>
+                        <p class="”indent”"></p>
+                        <center>
+                            <img src="https://img.icons8.com/color/48/000000/android-os.png">
+                            <img src="https://img.icons8.com/color/48/000000/mac-os.png">
+                            <img src="https://img.icons8.com/color/48/000000/windows-10.png">
+                            <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/48/000000/external-router-media-technology-flatart-icons-outline-flatarticons.png">
+                        </center>
+                    </div>
+                </div>
+                <div id="khung_vien_4" class="wrapper border border-2 rounded border-primary">
+                    <br>
+                    <center>
+                        <h3><b> Thiên Ân Unlimited Pro </b></h3>
+                        <h3 style="color:rgb(20, 101, 128)"> 30.000 VNĐ </h3>
+                        <div class="py-2"><b style="color:DeepSkyBlue">Thời Gian Sử Dụng 1 Tháng </b></div>
+                    </center>
+                    <div align="center">
+                        <i class="fas fa-database" style="color:darkblue" align="left"></i> Dung lượng : <b style="color:OrangeRed"> 【Không Giới Hạn Dung Lượng】</b>
+                        <p class="”indent”"></p>
+                        <i class="fas fa-server" style="color:darkblue"></i> Server: <b><br><img src="https://icarepharma.com.vn/wp-content/uploads/2020/09/Flag_of_Vietnam.gif" style="width:35px;height:20px;">
+                        【HCM, HN】
+                         <br><img src=" https://1.bp.blogspot.com/-wlhEg8IwnLw/YEKR5-ReWwI/AAAAAAAA42Q/CpthX4cZyp4zNtaf9w54lu-sZYIOCswoQCLcBGAsYHQ/s0/Flag_of_Singapore.gif" style="width:35px;height:20px;">  
+                        【Singapore】
+                        <br><img src=" https://1.bp.blogspot.com/-n-ib8nHUOdI/YFYcs-v1ApI/AAAAAAAA53g/_O-LQSfJ2AAnivIKJjfLdhBcIjNS05UggCLcBGAsYHQ/s0/Flag_of_Hong_Kong.gif" style="width:35px;height:20px;">  
+                        【Hong Kong】</b>
+                        <p class="”indent”"></p>
+                        <i class="fas fa-tachometer-alt" style="color:darkblue"></i> Tối đa <b><b style="color:OrangeRed">200 Mbps</b></b> (Tùy theo từng khu vực)
+                        <p class="”indent”"></p>
+                        <i class="fas fa-tools" style="color:darkblue"></i> Tăng tốc - Giảm ping - Chống LAG - Fake IP
+                        <p class="”indent”"></p>
+                        <i class="fa fa-mobile" style="color:darkblue"></i> Hỗ Trợ Hệ Điều Hành: <br> <i class="fab fa-android" style="color:LimeGreen"></i> <b>Android</b> (v2flyNG, v2rayNG, Clash For Android)<br>
+                        <i class="fab fa-apple" style="color: Gold"></i><b> iPhone</b> (Shadowrocket)
+                        <br><i class="fas fa-desktop" style="color: orange"></i><b> PC</b> (Netch)
+                        <p class="”indent”"></p> <i class="fas fa-sim-card" style="color:red"></i> Hỗ Trợ Sim: <b style="color:red">Viettel</b> &amp; <b style="color:Purple">MobiFone</b> &amp; <b style="color:orange">Vietnamobile</b>
+                        <p class="”indent”"></p>
+                        <i class="far fa-user" style="color:darkblue"></i> Người Dùng : <b><b style="color:OrangeRed"> 0/2 </b></b> Người
+                        <p class="”indent”"></p>
+                        <center>
+                            <b><b style="color:red">Thanh Toán</b> Vui Lòng Inbox Trực Tiếp</b>
+                            </br>
+                            <a href="https://zalo.me/0397082866" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;"></a>
+                            </br> <b>Hoặc Zalo Nhóm</b></br>
+                            <a href="https://zalo.me/g/xzzdst581" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;">
+                            </a>
+                        </center>
+                        <p class="”indent”"></p>
+                        <b><center>Nạp tiền qua Admin ➪ Mua ngay<br> ➪ Đặt hàng ➪ Thanh toán
+                        </center>
+                        </b>
+                        <p class="”indent”"></p>
+                        <center>
+                            <img src="https://img.icons8.com/color/48/000000/android-os.png">
+                            <img src="https://img.icons8.com/color/48/000000/mac-os.png">
+                            <img src="https://img.icons8.com/color/48/000000/windows-10.png">
+                            <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/48/000000/external-router-media-technology-flatart-icons-outline-flatarticons.png">
+                        </center>
+                    </div>
+                </div>
+                <div id="khung_vien_5" class="wrapper border border-2 rounded border-primary">
+                    <br>
+                    <center>
+                        <h3><b> Thiên Ân VPS</b></h3>
+                    </center>
+                    <div align="center">
+                        <b>⭐VPS Sing,Hongkong,...(Azure)</br>
+                            1-1 40k (All hđh)</br>
+                            1-2 60k (All hđh)</br>
+                            2-4 110kk (All hđh)</br>
+                            3-4 140kk (All hđh)</br>
+                            4-4  180k (All hđh)</br>
+                            4-8 240k (All hđh)</br>
+                            8-16 480k (All hđh)</br>
+                            ⚠VPS Die có bảo hành! Không bảo hành do đào coin,chạy quá 90% CPU,...</br>
+                            ⚠Ý thức lên chạy CPU nhiều thì mua cấu hình cao lên! </br></b>
+                        <center> <b style="color:red"> Liên hệ admin để mua và tham khảo bảng giá</b>
+                        </center>
+                        <center>
+                            <b style="color:red">Thanh Toán</b> <b>Vui Lòng Inbox Trực Tiếp</b>
+                            </br>
+                            <a href="https://zalo.me/0968811628" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;"></a>
+                            </br> <b>Hoặc Zalo Nhóm</b>
+                            </br>
+                            <a href="https://zalo.me/g/xzzdst581" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;">
+                            </a>
+                        </center>
+                    </div>
+                </div>
+                <div id="khung_vien_6" class="wrapper border border-2 rounded border-primary">
+                    <br>
+                    <center>
+                        <h3><b> Thiên Ân Account </b></h3>
+                    </center>
+                    <div align="center">
+                        <b>⭐Azure Pay as you go 150k/Ngâm 3 ngày/bảo hành login 3 ngày</br>
+                            ⭐Azure Pay as New reg luôn cho nóng/bảo hành 1h! Chỉ 110k</br>
+                            ⭐Azure Trial 80k/reg new vn/bảo hành 1h</br>
+                            - Linode Hàng inter chỉ 120k</br>
+                            - Thẻ MB BANK có sẵn 1$ để reg Azure chỉ 80k</br></b></b>
+                        <center> <b style="color:red"> Liên hệ admin để mua và tham khảo bảng giá</b>
+                        </center>
+                        <center>
+                            <b style="color:red">Thanh Toán</b> <b>Vui Lòng Inbox Trực Tiếp</b>
+                            </br>
+                            <a href="https://zalo.me/0968811628" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;"></a>
+                            </br> <b>Hoặc Zalo Nhóm</b>
+                            </br>
+                            <a href="https://zalo.me/g/xzzdst581" style="color:DodgerBlue">
+                                <img src=" https://bizweb.dktcdn.net/100/288/368/themes/815090/assets/zalo-icon-gif.gif?1629859962971" style="width:145px;height:60px;">
+                            </a>
+                        </center>
+                    </div>
+                </div>
+                <!-- /.content -->
+            </div>
+        </div>
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+            <div class="p-3">
+                <h5>Title</h5>
+                <p>Sidebar content</p>
+            </div>
+        </aside>
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="float-right d-none d-sm-inline">
+            </div>
+            <!-- Default to the left -->
+            <strong><a href="https://www.facebook.com/hoant0308">Made by @Tran Hoa</a></strong>
+            <strong><a href="https://www.facebook.com/hoant0308">&copy;2022</a></strong>
+        </footer>
+        <!-- ./wrapper -->
+
+        <!-- REQUIRED SCRIPTS -->
+
+        <!-- jQuery -->
+        <script src="plugins/jquery/jquery.min.js"></script>
+        <!-- Bootstrap 4 -->
+        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="dist/js/adminlte.min.js"></script>
+</body>
+
+</html>
